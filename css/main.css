@@ -1,7 +1,18 @@
-h1 {
-    background: url("/images/background.png") no-repeat center;
+body {
     width: 100vw;
     height: 100vh;
     margin: 0;
     padding: 0;
+}
+
+body::after {
+    content: "";
+    background: url(/images/background.png) 70% 90% no-repeat;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
 }
