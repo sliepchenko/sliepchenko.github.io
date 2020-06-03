@@ -79,12 +79,17 @@ section {
 
 #bio hr {
     border-top: 3px solid #f7df1e;
+    margin: 0 0 10px 0;
 }
 
 #bio .short-info {
     font-weight: bold;
+    margin: 0 0 10px 0;
 }
 
+#bio img {
+    margin: 0 0 10px 0;
+}
 
 #bio .short-list {
     margin: 0;
