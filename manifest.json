@@ -1,5 +1,12 @@
 {
     "name": "CV - Mykola Sliepchenko",
+    "short_name": "CV",
+    "description": "My public CV",
+    "display": "standalone",
+    "orientation": "portrait",
+    "background_color": "#FFFFFF",
+    "theme_color": "#f7df1e",
+    "lang": "en-US",
     "icons": [
         {
             "src": "\/images\/android-icon-36x36.png",
