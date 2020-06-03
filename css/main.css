@@ -8,6 +8,10 @@ section {
     height: 100vh;
 }
 
+.slider__indicator {
+    background-color: #343a40;
+}
+
 /* INTRO */
 #intro:after {
     content: "";
