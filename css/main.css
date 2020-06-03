@@ -3,15 +3,16 @@
     font-family: "Raleway", sans-serif;
 }
 
-section.intro {
+section {
     width: 100%;
     height: 100vh;
 }
 
-section.intro:after {
+/* INTRO */
+#intro:after {
     content: "";
-    background-image: url(/images/background.png);
-    background-position: 70% 90%;
+    background-image: url(/img/background.png);
+    background-position: 75% 90%;
     background-repeat: no-repeat;
     background-size: cover;
     position: absolute;
@@ -22,7 +23,7 @@ section.intro:after {
     z-index: -2;
 }
 
-section.intro:before {
+#intro:before {
     content: "";
     background: rgba(255, 255, 255, 0.8);
     position: absolute;
@@ -33,24 +34,24 @@ section.intro:before {
     z-index: -1;
 }
 
-section.intro h1 {
+#intro h1 {
     font-size: 64px;
     font-weight: bold;
     line-height: 60px;
 }
 
-section.intro p {
+#intro p {
     margin: 15px 0 0 0;
     font-size: 26px;
 }
 
-section.intro .js-logo {
+#intro .js-logo {
     color: #000000;
     font-weight: bold;
     padding: 0 0 0 12px;
 }
 
-section.intro .js-logo:before {
+#intro .js-logo:before {
     content: "";
     background: #f7df1e;
     position: absolute;
@@ -60,35 +61,60 @@ section.intro .js-logo:before {
     z-index: -1;
 }
 
-section.intro .social-links {
+#intro .social-links {
     margin-top: 30px;
-    font-size: 32px;
+    font-size: 38px;
 }
 
-/* INTRO */
+/* BIO */
+#bio h1 {
+    text-align: center;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+#bio hr {
+    border-top: 3px solid #f7df1e;
+}
+
+#bio .short-info {
+    font-weight: bold;
+}
+
+
+#bio .short-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#bio .fas {
+    color: #f7df1e;
+}
+
 @media (min-width: 992px) {
-    section.intro {
+    #intro {
         padding-left: 120px;
     }
 }
 
 @media (max-width: 992px) {
-    section.intro {
+    #intro {
         text-align: center;
     }
 
-    section.intro h1 {
+    #intro h1 {
         font-size: 32px;
         line-height: 36px;
     }
 
-    section.intro p {
+    #intro p {
         margin-top: 10px;
         font-size: 20px;
         line-height: 24px;
     }
 
-    section.intro .js-logo:before {
+    #intro .js-logo:before {
         width: 40px;
         height: 40px;
         margin: -15px 0 0 -12px;
