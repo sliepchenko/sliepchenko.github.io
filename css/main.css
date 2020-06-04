@@ -8,6 +8,11 @@ section {
     height: 100vh;
 }
 
+hr {
+    border-top: 3px solid #f7df1e;
+    margin: 0 0 10px 0;
+}
+
 .slider__indicator {
     background-color: #343a40;
 }
@@ -77,11 +82,6 @@ section {
     line-height: 60px;
 }
 
-#bio hr {
-    border-top: 3px solid #f7df1e;
-    margin: 0 0 10px 0;
-}
-
 #bio .short-info {
     font-weight: bold;
     margin: 0 0 10px 0;
@@ -92,13 +92,54 @@ section {
 }
 
 #bio .short-list {
-    margin: 0;
+    margin: 5px 0;
     padding: 0;
     list-style: none;
 }
 
 #bio .fas {
     color: #f7df1e;
+}
+
+/* Skills */
+#skills h1 {
+    text-align: center;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+#skills .short-info {
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+#skills .progress {
+    height: 50px;
+    display: block;
+    background: none;
+}
+
+#skills .progress .skill {
+    margin: 0 0 6px 0;
+    text-transform: uppercase;
+    display: block;
+    font-weight: bold;
+}
+
+#skills .progress .skill .val {
+    float: right;
+    font-style: normal;
+}
+
+#skills .progress-bar-wrap {
+    background-color: #e9ecef;
+}
+
+#skills .progress-bar {
+    width: 1px;
+    height: 10px;
+    transition: .9s;
+    background-color: #343a40;
 }
 
 @media (min-width: 992px) {
