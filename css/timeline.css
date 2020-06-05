@@ -1,6 +1,6 @@
 .timeline {
     list-style: none;
-    padding: 20px 0 20px;
+    padding: 20px 0;
     position: relative;
 }
 
@@ -159,6 +159,10 @@
 }
 
 @media (max-width: 767px) {
+    ul.timeline {
+        padding: 0;
+    }
+
     ul.timeline:before {
         left: 40px;
     }
@@ -193,20 +197,20 @@
         right: auto;
     }
 
-    .timeline > li > .timeline-panel {
-        padding: 5px;
+    ul.timeline > li > .timeline-panel {
+        padding: 10px;
     }
 
-    .timeline .timeline-body h5 {
+    ul.timeline .timeline-body h5 {
         font-size: 12px;
     }
 
-    .timeline .timeline-body p {
+    ul.timeline .timeline-body p {
         font-size: 12px;
         margin-bottom: 0.3rem;
     }
 
-    .timeline .timeline-body .span {
+    ul.timeline .timeline-body .span {
         font-size: 10px;
     }
 }
