@@ -1,10 +1,9 @@
 var slider = function (sliderElement) {
-    
     var pages = [];
     var currentSlide = 1;
     var isChanging = false;
-    var keyUp = {38:1, 33:1};
-    var keyDown = {40:1, 34:1};
+    var keyUp = {38: 1, 33: 1};
+    var keyDown = {40: 1, 34: 1};
     
     var init = function () {
         
@@ -33,7 +32,7 @@ var slider = function (sliderElement) {
         // page change animation is done
         detectChangeEnd() && document.querySelector(sliderElement).addEventListener(detectChangeEnd(), function () {
             if (isChanging) {
-                setTimeout(function() {
+                setTimeout(function () {
                     isChanging = false;
                     window.location.hash = document.querySelector('[data-slider-index="' + currentSlide + '"]').id;
                 }, 400);
@@ -59,7 +58,7 @@ var slider = function (sliderElement) {
         });
         
         document.body.appendChild(indicatorContainer);
-        document.querySelector('a[data-slider-target-index = "' + currentSlide +'"]').classList.add('slider__indicator--active');
+        document.querySelector('a[data-slider-target-index = "' + currentSlide + '"]').classList.add('slider__indicator--active');
         
         
         // stuff for touch devices
@@ -99,7 +98,7 @@ var slider = function (sliderElement) {
             'WebkitTransition': 'webkitTransitionEnd'
         };
         
-        for(transition in transitions) {
+        for (transition in transitions) {
             if (e.style[transition] !== undefined) {
                 return transitions[transition];
             }
@@ -134,7 +133,7 @@ var slider = function (sliderElement) {
         
         // change dots
         document.querySelector('a.slider__indicator--active').classList.remove('slider__indicator--active');
-        document.querySelector('a[data-slider-target-index="' + currentSlide +'"]').classList.add('slider__indicator--active');
+        document.querySelector('a[data-slider-target-index="' + currentSlide + '"]').classList.add('slider__indicator--active');
     };
     
     // go to spesific slide if it exists
@@ -151,7 +150,8 @@ var slider = function (sliderElement) {
             window.scrollTo(0, 0);
             gotoSlide(location.hash);
         }, 1);
-    };
+    }
+    ;
     
     // we have lift off
     if (document.readyState === 'complete') {

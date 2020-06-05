@@ -1,0 +1,39 @@
+#skills h1 {
+    text-align: center;
+    font-weight: bold;
+    line-height: 60px;
+}
+
+#skills .short-info {
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+#skills .progress {
+    height: 50px;
+    display: block;
+    background: none;
+}
+
+#skills .progress .skill {
+    margin: 0 0 6px 0;
+    text-transform: uppercase;
+    display: block;
+    font-weight: bold;
+}
+
+#skills .progress .skill .val {
+    float: right;
+    font-style: normal;
+}
+
+#skills .progress-bar-wrap {
+    background-color: #e9ecef;
+}
+
+#skills .progress-bar {
+    width: 1px;
+    height: 10px;
+    transition: .9s;
+    background-color: #343a40;
+}
