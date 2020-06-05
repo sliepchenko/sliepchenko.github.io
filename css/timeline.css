@@ -193,11 +193,20 @@
         right: auto;
     }
 
-    ul.timeline > li > h5 {
-        font-size: 14px;
+    .timeline > li > .timeline-panel {
+        padding: 5px;
     }
 
-    ul.timeline > li > .timeline-body {
+    .timeline .timeline-body h5 {
+        font-size: 12px;
+    }
+
+    .timeline .timeline-body p {
+        font-size: 12px;
+        margin-bottom: 0.3rem;
+    }
+
+    .timeline .timeline-body .span {
         font-size: 10px;
     }
 }
