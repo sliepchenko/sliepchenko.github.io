@@ -41,15 +41,39 @@
 @media (max-height: 667px) {
     #skills h1 {
         font-size: 1.7rem;
-        font-weight: bold;
         line-height: 1.4rem;
     }
 
     #skills .short-info {
         font-size: 0.8rem;
+        line-height: 0.9rem;
     }
 
     #skills .progress {
         height: 40px;
+    }
+}
+
+@media (max-height: 568px) {
+    #skills h1 {
+        font-size: 1.5rem;
+        line-height: 1.3rem;
+    }
+
+    #skills .short-info {
+        font-size: 0.65rem;
+        line-height: 0.8rem;
+    }
+
+    #skills .progress {
+        height: 30px;
+    }
+
+    #skills .progress-bar {
+        height: 6px;
+    }
+
+    #skills .progress .skill {
+        margin: 0 0 4px 0;
     }
 }

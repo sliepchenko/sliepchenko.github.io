@@ -83,7 +83,7 @@
 
 .timeline > li > .timeline-panel:before {
     position: absolute;
-    top: 26px;
+    top: 13px;
     right: -15px;
     display: inline-block;
     border-top: 15px solid transparent;
@@ -95,7 +95,7 @@
 
 .timeline > li > .timeline-panel:after {
     position: absolute;
-    top: 27px;
+    top: 14px;
     right: -14px;
     display: inline-block;
     border-top: 14px solid transparent;
@@ -198,7 +198,7 @@
     ul.timeline > li > .timeline-badge {
         left: 25px;
         margin-left: 0;
-        top: 28px;
+        top: 15px;
     }
 
     ul.timeline > li > .timeline-panel {
@@ -254,5 +254,37 @@
 
     #timeline p {
         margin-bottom: 0.1rem;
+    }
+}
+
+@media (max-height: 375px) {
+    ul.timeline:before {
+        left: -10px;
+    }
+
+    ul.timeline .timeline-heading h5 {
+        font-size: 0.8rem;
+        line-height: 0.8rem;
+    }
+
+    ul.timeline .timeline-heading p {
+        font-size: 0.7rem;
+        line-height: 0.7rem;
+    }
+
+    ul.timeline .timeline-body {
+        font-size: 0.65rem;
+        line-height: 0.7rem;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        padding: 5px 10px;
+        width: calc(100% - 25px);
+        width: -moz-calc(100% - 25px);
+        width: -webkit-calc(100% - 25px);
+    }
+
+    ul.timeline > li > .timeline-badge {
+        left: -25px;
     }
 }

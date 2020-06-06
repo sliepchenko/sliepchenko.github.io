@@ -32,7 +32,7 @@
         font-size: 0.8rem;
     }
 
-    #bio .col-md-6 {
+    #bio .col-sm-6 {
          flex: 0 0 50%;
          max-width: 50%;
      }
@@ -47,10 +47,31 @@
 
     #bio .short-info {
         font-size: 0.8rem;
+        line-height: 0.9rem;
     }
 
     #bio .short-list {
         font-size: 0.8rem;
+        margin: 5px 0;
+        padding: 0;
+        list-style: none;
+    }
+}
+
+@media (max-height: 568px) {
+    #bio h1 {
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.3rem;
+    }
+
+    #bio .short-info {
+        font-size: 0.65rem;
+        line-height: 0.8rem;
+    }
+
+    #bio .short-list {
+        font-size: 0.65rem;
         margin: 5px 0;
         padding: 0;
         list-style: none;
