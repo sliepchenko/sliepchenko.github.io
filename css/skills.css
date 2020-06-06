@@ -45,10 +45,6 @@
         line-height: 1.4rem;
     }
 
-    #skills .row .mt-3:first-of-type {
-        margin-top: 0.1rem!important;
-    }
-
     #skills .short-info {
         font-size: 0.8rem;
     }
