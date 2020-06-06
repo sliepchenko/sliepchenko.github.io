@@ -24,14 +24,14 @@
 }
 
 #intro h1 {
-    font-size: 64px;
+    font-size: 2rem;
     font-weight: bold;
-    line-height: 60px;
+    line-height: 1.9rem;
 }
 
 #intro p {
     margin: 15px 0 0 0;
-    font-size: 26px;
+    font-size: 1.8rem;
 }
 
 #intro .js-logo {
@@ -52,7 +52,7 @@
 
 #intro .social-links {
     margin-top: 30px;
-    font-size: 38px;
+    font-size: 2rem;
 }
 
 @media (min-width: 992px) {
@@ -67,13 +67,12 @@
     }
 
     #intro h1 {
-        font-size: 32px;
-        line-height: 36px;
+        line-height: 1.8rem;
     }
 
     #intro p {
         margin-top: 10px;
-        font-size: 20px;
+        font-size: 1.5rem;
         line-height: 24px;
     }
 

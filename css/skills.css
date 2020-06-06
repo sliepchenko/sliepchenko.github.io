@@ -1,7 +1,7 @@
 #skills h1 {
     text-align: center;
     font-weight: bold;
-    line-height: 60px;
+    line-height: 2rem;
 }
 
 #skills .short-info {
@@ -36,4 +36,24 @@
     height: 10px;
     transition: .9s;
     background-color: #343a40;
+}
+
+@media (max-height: 667px) {
+    #skills h1 {
+        font-size: 1.7rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #skills .row .mt-3:first-of-type {
+        margin-top: 0.1rem!important;
+    }
+
+    #skills .short-info {
+        font-size: 0.8rem;
+    }
+
+    #skills .progress {
+        height: 40px;
+    }
 }

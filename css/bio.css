@@ -1,7 +1,7 @@
 #bio h1 {
     text-align: center;
     font-weight: bold;
-    line-height: 60px;
+    line-height: 2rem;
 }
 
 #bio .short-info {
@@ -21,4 +21,38 @@
 
 #bio .fas {
     color: #f7df1e;
+}
+
+@media (max-width: 767px) {
+    #bio .short-info {
+        font-size: 0.8rem;
+    }
+
+    #bio .short-list {
+        font-size: 0.8rem;
+    }
+
+    #bio .col-md-6 {
+         flex: 0 0 50%;
+         max-width: 50%;
+     }
+}
+
+@media (max-height: 667px) {
+    #bio h1 {
+        font-size: 1.7rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #bio .short-info {
+        font-size: 0.8rem;
+    }
+
+    #bio .short-list {
+        font-size: 0.8rem;
+        margin: 5px 0;
+        padding: 0;
+        list-style: none;
+    }
 }

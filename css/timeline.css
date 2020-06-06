@@ -1,3 +1,25 @@
+#timeline h1 {
+    text-align: center;
+    font-weight: bold;
+    line-height: 2rem;
+}
+
+@media (max-height: 667px) {
+    #timeline h1 {
+        font-size: 1.7rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #timeline .short-info {
+        font-size: 0.8rem;
+    }
+
+    #timeline .progress {
+        height: 40px;
+    }
+}
+
 .timeline {
     list-style: none;
     padding: 20px 0;
@@ -212,10 +234,25 @@
 
     ul.timeline .timeline-body p {
         font-size: 0.7rem;
-        margin-bottom: 0.3rem;
     }
 
     ul.timeline .timeline-body .span {
         font-size: 10px;
+    }
+}
+
+@media (max-height: 667px) {
+    #timeline h1 {
+        font-size: 1.7rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #timeline h5 {
+        margin-bottom: 0.1rem;
+    }
+
+    #timeline p {
+        margin-bottom: 0.1rem;
     }
 }
