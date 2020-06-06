@@ -91,7 +91,7 @@
     font-size: 1em;
     text-align: center;
     position: absolute;
-    top: 16px;
+    top: 25px;
     left: 50%;
     margin-left: -15px;
     background-color: #999999;
@@ -201,12 +201,16 @@
         padding: 10px;
     }
 
-    ul.timeline .timeline-body h5 {
-        font-size: 12px;
+    ul.timeline .timeline-heading h5 {
+        font-size: 0.9rem;
+    }
+
+    ul.timeline .timeline-heading p {
+        font-size: 0.8rem;
     }
 
     ul.timeline .timeline-body p {
-        font-size: 12px;
+        font-size: 0.7rem;
         margin-bottom: 0.3rem;
     }
 
