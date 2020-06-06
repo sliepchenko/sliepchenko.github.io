@@ -181,6 +181,7 @@
 
     ul.timeline > li > .timeline-panel {
         float: right;
+        margin: 2px 0;
     }
 
     ul.timeline > li > .timeline-panel:before {
