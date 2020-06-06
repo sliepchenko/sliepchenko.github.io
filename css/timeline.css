@@ -180,7 +180,7 @@
     font-size: 12px;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 850px) {
     ul.timeline {
         padding: 0;
     }
@@ -257,7 +257,7 @@
     }
 }
 
-@media (max-height: 375px) {
+@media (max-height: 414px) {
     ul.timeline:before {
         left: -10px;
     }
