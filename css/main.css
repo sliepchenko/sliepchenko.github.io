@@ -1,7 +1,9 @@
-@import url(intro.css);
+@import url(header.css);
+@import url(home.css);
 @import url(bio.css);
 @import url(skills.css);
 @import url(timeline.css);
+@import url(slider.css);
 
 * {
     color: #343a40;
@@ -16,8 +18,4 @@ section {
 hr {
     border-top: 3px solid #f7df1e;
     margin: 0 0 10px 0;
-}
-
-.slider__indicator {
-    background-color: #343a40;
 }

@@ -26,27 +26,21 @@
     <!-- icons -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
 
-    <!-- smooth scrolling -->
-    <script src="/js/slider.js"></script>
-    <link rel="stylesheet" href="/css/slider.css">
-
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-<div class="slides">
-<!--    <header class="d-flex flex-column justify-content-center">-->
-<!--        <nav class="nav-menu">-->
-<!--            <ul>-->
-<!--                <li><a href="#home"><i class="fas fa-home"></i> <span>Home</span></a></li>-->
-<!--                <li><a href="#about"><i class="fas fa-user"></i> <span>About</span></a></li>-->
-<!--                <li><a href="#resume"><i class="fas fa-file"></i> <span>Resume</span></a></li>-->
-<!--                <li><a href="#contact"><i class="fas fa-envelope"></i> <span>Contact</span></a></li>-->
-<!--                <li><a href="#contact"><i class="fas fa-arrows-alt"></i> <span>Full Screen</span></a></li>-->
-<!--            </ul>-->
-<!--        </nav>-->
-<!--    </header>-->
+<button type="button" class="mobile-nav-toggle"><i class="fas fa-bars"></i></button>
+<header class="d-flex flex-column justify-content-center">
+    <nav class="nav-menu">
+        <a class="nav-menu_button_1" href="#home"><i class="fas fa-home"></i> <span>Home</span></a>
+        <a class="nav-menu_button_2" href="#bio"><i class="fas fa-user"></i> <span>BIO</span></a>
+        <a class="nav-menu_button_3" href="#skills"><i class="fas fa-cogs"></i> <span>Skills</span></a>
+        <a class="nav-menu_button_4" href="#timeline"><i class="fas fa-business-time"></i> <span>Timeline</span></a>
+    </nav>
+</header>
 
-    <section id="intro" class="d-flex flex-column justify-content-center">
+<div class="slider">
+    <section id="home" class="d-flex flex-column justify-content-center">
         <div class="container">
             <h1>Mykola Sliepchenko</h1>
             <p>I'm a <span class="js-logo">JS</span> Developer</p>
@@ -314,11 +308,6 @@
     </section>
 </div>
 
-<!-- Smooth slide/scroll/swipe -->
-<script>
-    slider('.slides');
-</script>
-
 <script>
     function requestFullScreen() {
         if (document.body.requestFullscreen) {
@@ -333,5 +322,8 @@
     }
 </script>
 
+<!-- smooth scrolling -->
+<script src="/js/slider.js"></script>
+<script src="/js/menu.js"></script>
 </body>
 </html>
