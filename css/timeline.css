@@ -142,6 +142,19 @@
     right: auto;
 }
 
+.timeline-heading h5 {
+    font-size: 1rem;
+    margin-bottom: 0.1rem;
+}
+
+.timeline-heading p {
+    margin-bottom: 0.1rem;
+}
+
+.timeline-heading span {
+    margin-bottom: 0.1rem;
+}
+
 .timeline-badge.primary {
     background-color: #2e6da4 !important;
 }
@@ -177,7 +190,7 @@
 }
 
 .timeline-body {
-    font-size: 12px;
+    font-size: 0.7rem;
 }
 
 @media (max-width: 900px) {
@@ -219,24 +232,33 @@
     }
 
     ul.timeline .timeline-heading h5 {
-        /*display: inline-block;*/
-        /*float: left;*/
-        font-size: 0.9rem;
+        font-size: 0.7rem;
+        margin-bottom: 0.1rem;
     }
 
     ul.timeline .timeline-heading p {
-        /*display: inline-block;*/
-        /*float: right;*/
         font-size: 0.8rem;
     }
 
-    ul.timeline .timeline-body p {
-        /*display: inline-block;*/
-        font-size: 0.7rem;
+    ul.timeline .timeline-body {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-height: 768px) {
+    #timeline h1 {
+        font-size: 1.7rem;
+        font-weight: bold;
+        line-height: 1.4rem;
     }
 
-    ul.timeline .timeline-body .span {
-        font-size: 10px;
+    #timeline h5 {
+        font-size: 0.6rem;
+        margin-bottom: 0.1rem;
+    }
+
+    #timeline p {
+        margin-bottom: 0.1rem;
     }
 }
 
@@ -248,6 +270,7 @@
     }
 
     #timeline h5 {
+        font-size: 0.6rem;
         margin-bottom: 0.1rem;
     }
 
@@ -266,7 +289,7 @@
     }
 
     ul.timeline .timeline-heading h5 {
-        font-size: 0.8rem;
+        font-size: 0.6rem;
         line-height: 0.8rem;
     }
 
@@ -281,7 +304,7 @@
     }
 
     ul.timeline > li > .timeline-panel {
-        padding: 5px 10px;
+        padding: 1px 5px;
         width: calc(100% - 25px);
         width: -moz-calc(100% - 25px);
         width: -webkit-calc(100% - 25px);
