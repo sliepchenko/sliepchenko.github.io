@@ -87,17 +87,17 @@ header a:hover {
 }
 
 .nav-menu a:hover, .nav-menu .active, .nav-menu li:hover > a {
-    color: #000000;
+    color: #343a40;
     background: #f7df1e;
 }
 
 .nav-menu a:hover span, .nav-menu .active > span, .nav-menu li:hover > a span {
-    color: #000000;
+    color: #343a40;
 }
 
 .nav-menu a:hover, .nav-menu li:hover > a {
     width: 100%;
-    color: #000000;
+    color: #343a40;
 }
 
 .nav-menu a:hover span, .nav-menu li:hover > a span {
@@ -121,7 +121,7 @@ header a:hover {
 }
 
 .mobile-nav-toggle i {
-    color: #000000;
+    color: #343a40;
 }
 
 header.active .nav-menu {
