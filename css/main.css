@@ -14,3 +14,21 @@ hr {
     border-top: 3px solid #f7df1e;
     margin: 0 0 10px 0;
 }
+
+@media (max-height: 768px) {
+    hr {
+        margin: 0 0 8px 0;
+    }
+}
+
+@media (max-height: 667px) {
+    hr {
+        margin: 0 0 5px 0;
+    }
+}
+
+@media (max-height: 568px) {
+    hr {
+        margin: 0 0 2px 0;
+    }
+}
