@@ -318,18 +318,9 @@
     </section>
 </div>
 
+<script src="https://browser.sentry-cdn.com/5.18.0/bundle.min.js" integrity="sha384-9M0M/t9hmfACAyfoyFXXyzRbljCren5OjRJhHwZHJzuzFt02ZB67XZO27O1tml6L" crossorigin="anonymous"></script>
 <script>
-    function requestFullScreen() {
-        if (document.body.requestFullscreen) {
-            document.body.requestFullscreen();
-        } else if (document.body.mozRequestFullScreen) { /* Firefox */
-            document.body.mozRequestFullScreen();
-        } else if (document.body.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-            document.body.webkitRequestFullscreen();
-        } else if (document.body.msRequestFullscreen) { /* IE/Edge */
-            document.body.msRequestFullscreen();
-        }
-    }
+    Sentry.init({ dsn: 'https://ca9c349818694c3a93eae3d058854e55@o412050.ingest.sentry.io/5288230' });
 </script>
 
 <!-- smooth scrolling -->
