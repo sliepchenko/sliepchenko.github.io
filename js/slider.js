@@ -127,6 +127,8 @@ window.addEventListener('load', () => {
         
         const nextActive = document.querySelector('a.nav-menu_button_' + currentSlide);
         nextActive && nextActive.classList.add('active');
+    
+        ga('send', 'section_view', nextActive.href);
     };
     
     // go to spesific slide if it exists
