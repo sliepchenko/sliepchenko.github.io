@@ -26,8 +26,5 @@
     "devDependencies": {
         "gulp": "^4.0.2",
         "gulp-webserver": "^0.9.1"
-    },
-    "dependencies": {
-        "gulp": "^4.0.2"
     }
 }

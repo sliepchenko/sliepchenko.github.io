@@ -1,3 +1,4 @@
+@import url(colours.css);
 @import url(header.css);
 @import url(home.css);
 @import url(bio.css);
@@ -6,12 +7,12 @@
 @import url(slider.css);
 
 * {
-    color: #343a40;
+    color: var(--black, #343a40);
     font-family: "Raleway", sans-serif;
 }
 
 hr {
-    border-top: 3px solid #f7df1e;
+    border-top: 3px solid var(--yellow, #f7df1e);
     margin: 0 0 10px 0;
 }
 

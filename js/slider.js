@@ -1,25 +1,41 @@
 window.addEventListener('load', () => {
-    const sliderElement = '.slider';
+    const sliderElement = document.querySelector('.slider');
     const pages = document.querySelectorAll('.slider section');
+    const buttonSelector = 'nav-menu__button';
+
+    const WHEEL_MIN = 100;
     
-    const KEY_UP = {38: 1, 33: 1};
-    const KEY_DOWN = {40: 1, 34: 1};
-    
+    const KEY_UP = 'ArrowUp';
+    const KEY_LEFT = 'ArrowLeft';
+    const KEY_DOWN = 'ArrowDown';
+    const KEY_RIGHT = 'ArrowRight';
+
     let currentSlide = 1;
     let isChanging = false;
     
     const init = () => {
         // control scrolling
-        const whatWheel = 'onwheel' in document.createElement('div') ? 'wheel' : document.onmousewheel !== undefined ? 'mousewheel' : 'DOMMouseScroll';
-    
-        document.querySelectorAll('a[class^="nav-menu_button_"]').forEach(el => {
-            el.addEventListener('click', () => {
-                gotoSlide(el.getAttribute('href'));
+        const whatWheel = 'onwheel' in document.createElement('div') ?
+            'wheel' :
+            document.onmousewheel !== undefined ?
+                'mousewheel' :
+                'DOMMouseScroll';
+
+        // change current slide by menu buttons
+        document.querySelectorAll(`[class^="${buttonSelector}"]`)
+            .forEach(el => {
+                el.addEventListener('click', () => {
+                    gotoSlide(el.getAttribute('href'));
+                });
             });
-        });
         
         // watching for scroll, calculate direction and change slide
         window.addEventListener(whatWheel, (e) => {
+            // protect from inertia and small changes
+            if (Math.abs(e.deltaY) < WHEEL_MIN) {
+                return;
+            }
+
             const direction = e.wheelDelta || e.deltaY;
             
             if (direction > 0) {
@@ -31,19 +47,32 @@ window.addEventListener('load', () => {
         
         // allow keyboard input
         window.addEventListener('keydown', (e) => {
-            if (KEY_UP[e.keyCode]) {
-                changeSlide(-1);
-            } else if (KEY_DOWN[e.keyCode]) {
-                changeSlide(1);
+            switch (e.key) {
+                case KEY_LEFT:
+                case KEY_UP:
+                    changeSlide(-1);
+                    break;
+
+                case KEY_RIGHT:
+                case KEY_DOWN:
+                    changeSlide(1);
+                    break;
+
+                default:
+
+                    break;
             }
         });
         
         // page change animation is done
-        detectChangeEnd() && document.querySelector(sliderElement).addEventListener(detectChangeEnd(), () => {
+        detectChangeEnd() && sliderElement.addEventListener(detectChangeEnd(), () => {
             if (isChanging) {
                 setTimeout(() => {
                     isChanging = false;
-                    window.location.hash = document.querySelector('.nav-menu_button_' + currentSlide).getAttribute('href');
+
+                    window.location.hash =
+                        document.querySelector(`.${buttonSelector}_${currentSlide}`)
+                            .getAttribute('href');
                 }, 150);
             }
         });
@@ -51,8 +80,7 @@ window.addEventListener('load', () => {
         // stuff for touch devices
         let touchStartPos = 0;
         let touchStopPos = 0;
-        let touchMinLength = 90;
-        
+
         document.querySelector('.slider').addEventListener('touchstart', (e) => {
             e.preventDefault();
             
@@ -70,9 +98,9 @@ window.addEventListener('load', () => {
                 touchStopPos = touch.pageY;
             }
             
-            if (touchStartPos + touchMinLength < touchStopPos) {
+            if (touchStartPos + WHEEL_MIN < touchStopPos) {
                 changeSlide(-1);
-            } else if (touchStartPos > touchStopPos + touchMinLength) {
+            } else if (touchStartPos > touchStopPos + WHEEL_MIN) {
                 changeSlide(1);
             }
         });
@@ -117,23 +145,25 @@ window.addEventListener('load', () => {
         currentSlide += direction;
         isChanging = true;
         
-        changeCss(document.querySelector(sliderElement), {
+        changeCss(sliderElement, {
             transform: 'translate3d(0, ' + -(currentSlide - 1) * 100 + '%, 0)'
         });
     
         // change nav buttons class
-        const currentActive = document.querySelector('a[class^="nav-menu_button_"].active');
+        const currentActive = document.querySelector(`[class^="${buttonSelector}"].active`);
         currentActive && currentActive.classList.remove('active');
-        
-        const nextActive = document.querySelector('a.nav-menu_button_' + currentSlide);
+
+        const nextActive = document.querySelector(`a.${buttonSelector}_${currentSlide}`);
         nextActive && nextActive.classList.add('active');
     
         ga('send', 'section_view', nextActive.href);
     };
     
-    // go to spesific slide if it exists
+    // go to specific slide if it exists
     const gotoSlide = (where) => {
-        const target = document.querySelector(`a[href="${where}"]`).className.match(/nav-menu_button_(\d*)/)[1];
+        const regExp = new RegExp(`${buttonSelector}_(\\d*)`)
+        const target = document.querySelector(`a[href="${where}"]`)
+            .className.match(regExp)[1];
         
         if (target !== currentSlide && document.querySelector(where)) {
             changeSlide(target - currentSlide);
