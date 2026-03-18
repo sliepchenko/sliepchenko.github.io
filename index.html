@@ -53,10 +53,11 @@
     <section id="home" class="d-flex flex-column justify-content-center">
         <div class="container">
             <h1>Mykola Sliepchenko</h1>
-            <p>I'm a <span class="js-logo">JS</span> Developer</p>
+            <p>I'm a <span id="typed-role"></span></p>
             <div class="social-links">
                 <a href="mailto:slepchenko.nicholas@gmail.com?body=Please, notify me if you find this email on my website :)" target="_blank" onclick="ga('send', 'contact_click', 'email');"><i class="fas fa-envelope"></i></a>
                 <a href="https://www.linkedin.com/in/nslepchenko/" target="_blank"><i class="fab fa-linkedin" onclick="ga('send', 'contact_click', 'linkedin');"></i></a>
+                <a href="https://www.instagram.com/mykola.sliepchenko/" target="_blank"><i class="fab fa-instagram" onclick="ga('send', 'contact_click', 'instagram');"></i></a>
             </div>
         </div>
     </section>
@@ -329,6 +330,27 @@
 <script src="https://browser.sentry-cdn.com/5.18.0/bundle.min.js" integrity="sha384-9M0M/t9hmfACAyfoyFXXyzRbljCren5OjRJhHwZHJzuzFt02ZB67XZO27O1tml6L" crossorigin="anonymous"></script>
 <script>
     Sentry.init({ dsn: 'https://ca9c349818694c3a93eae3d058854e55@o412050.ingest.sentry.io/5288230' });
+</script>
+
+<!-- Typed.js -->
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    new Typed('#typed-role', {
+        strings: [
+            '<span class="js-logo">JS</span> Developer',
+            'a Team/Tech Leader',
+            'a Resource Manager',
+            'a Mentor',
+            'an eKids Ambassador',
+            'an AI Champion',
+            'a Certified Interviewer'
+        ],
+        typeSpeed: 60,
+        backSpeed: 40,
+        backDelay: 2000,
+        loop: true,
+        smartBackspace: true
+    });
 </script>
 
 <!-- smooth scrolling -->
