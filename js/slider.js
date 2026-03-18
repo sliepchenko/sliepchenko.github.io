@@ -7,6 +7,7 @@ window.addEventListener('load', () => {
     
     let currentSlide = 1;
     let isChanging = false;
+    let wheelCooldown = null;
     
     const init = () => {
         // control scrolling
@@ -20,11 +21,22 @@ window.addEventListener('load', () => {
         
         // watching for scroll, calculate direction and change slide
         window.addEventListener(whatWheel, (e) => {
-            const direction = e.wheelDelta || e.deltaY;
-            
-            if (direction > 0) {
+            // Use deltaY for direction; fall back to inverted wheelDelta (legacy browsers use opposite sign)
+            const delta = e.deltaY !== undefined ? e.deltaY : -(e.wheelDelta);
+
+            // Ignore tiny movements (trackpad inertia / accidental nudges)
+            if (Math.abs(delta) < 30) return;
+
+            // Reset cooldown on every significant event so inertia trains don't slip through
+            if (wheelCooldown) {
+                clearTimeout(wheelCooldown);
+                wheelCooldown = setTimeout(() => { wheelCooldown = null; }, 500);
+                return;
+            }
+
+            if (delta < 0) {
                 changeSlide(-1);
-            } else {
+            } else if (delta > 0) {
                 changeSlide(1);
             }
         });
@@ -116,6 +128,10 @@ window.addEventListener('load', () => {
         // change page
         currentSlide += direction;
         isChanging = true;
+
+        // Block wheel events during transition + inertia cooldown (800ms covers the 450ms transition + residual trackpad inertia)
+        if (wheelCooldown) clearTimeout(wheelCooldown);
+        wheelCooldown = setTimeout(() => { wheelCooldown = null; }, 800);
         
         changeCss(document.querySelector(sliderElement), {
             transform: 'translate3d(0, ' + -(currentSlide - 1) * 100 + '%, 0)'
