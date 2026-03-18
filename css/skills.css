@@ -18,12 +18,13 @@
 #skills .progress .skill {
     margin: 0 0 6px 0;
     text-transform: uppercase;
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
     font-weight: bold;
 }
 
 #skills .progress .skill .val {
-    float: right;
     font-style: normal;
 }
 
