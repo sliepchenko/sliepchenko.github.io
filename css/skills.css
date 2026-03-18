@@ -4,6 +4,15 @@
     line-height: 2rem;
 }
 
+#skills .skills-category {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-bottom: 2px solid #343a40;
+    padding-bottom: 4px;
+    margin-bottom: 0;
+}
+
 #skills .short-info {
     font-weight: bold;
     margin: 0 0 10px 0;
